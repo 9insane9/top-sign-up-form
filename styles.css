@@ -1,0 +1,88 @@
+/* <a href="https://www.flaticon.com/free-icons/potato" title="potato icons">Potato icons created by Freepik - Flaticon</a> */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100vw;
+    /* background: black; */
+}
+
+.page-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    max-width: 1300px;
+    height: 100vh;
+    margin: 0 auto;
+    border: 1px solid red;
+}
+
+.left {
+    width: 35%;
+    background: url("https://images.unsplash.com/photo-1590165482129-1b8b27698780?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.logo-text {
+    position: relative;
+    background-color: rgb(0, 0, 0, 0.4);
+    top: 20%;
+    height: 15vh;
+    color: white;
+    font-size: 80px;
+}
+
+/* .logo-text > p::before {
+    content: url("./potato.png");
+    max-height: 30px;
+    color: wheat;
+} */
+
+.right {
+    width: 65%;
+}
+
+.intro, .form, .submit {
+    padding-left: 50px;
+}
+
+.intro {
+    height: 35vh;
+    background-color: rgb(240, 239, 239);
+    border: 1px solid green;
+}
+
+.form {
+    height: 35vh;
+    border: 1px solid cyan;
+}
+
+.submit {
+    height: 30vh;
+    border: 1px solid purple;
+}
+
+button {
+    display: block;
+}
+/*FORM STYLING*/
+form {
+    display: flex;
+    flex-wrap: wrap; /*change later after fields are set to same length */
+    max-width: 700px;
+    border: 1px solid blue;
+}
+
+.form-field {
+    margin: 30px 60px 0 0;
+}
+
+input {
+    display: block;
+    width: 200px;
+}
