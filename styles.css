@@ -1,5 +1,7 @@
 /* <a href="https://www.flaticon.com/free-icons/potato" title="potato icons">Potato icons created by Freepik - Flaticon</a> */
 
+@import url('https://fonts.googleapis.com/css2?family=Astloch:wght@400;700&family=Corben&display=swap');
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -8,6 +10,8 @@
 
 body {
     width: 100vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 1px solid orange;
     /* background: black; */
 }
 
@@ -16,7 +20,8 @@ body {
     flex-direction: row;
     flex-wrap: nowrap;
     max-width: 1300px;
-    height: 100vh;
+    min-width: 350px;
+    min-height: 100vh;
     margin: 0 auto;
     border: 1px solid red;
 }
@@ -30,16 +35,31 @@ body {
 
 .logo-text {
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: rgb(0, 0, 0, 0.4);
     top: 20%;
     height: 15vh;
+    width: 100%;
     color: white;
+    font-family: 'Corben', serif;
     font-size: 80px;
+    border: 1px solid blue;
 }
 
-/* .logo-text > p::before {
+.logo-text::before {
     content: url("./potato.png");
-    max-height: 30px;
+    transform: scale(20%);
+    filter: invert();
+    margin-right: -200px;
+    margin-left: -200px;
+}
+
+
+/* .logo-text::before {
+    content: url("./potato.png");
+    height: 30px;
     color: wheat;
 } */
 
@@ -52,14 +72,31 @@ body {
 }
 
 .intro {
+    padding-top: 15%;
+    padding-right: 200px;
     height: 35vh;
     background-color: rgb(240, 239, 239);
     border: 1px solid green;
+    font-size: 22px;
+    font-weight: 550;
+}
+
+.intro p:last-child {
+    padding-top: 20px;
 }
 
 .form {
-    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    /* min-height: 35vh; */
     border: 1px solid cyan;
+}
+
+.form > h1 {
+    text-align: start;
+    margin-top: 30px;
 }
 
 .submit {
@@ -67,8 +104,31 @@ body {
     border: 1px solid purple;
 }
 
+.submit > span {
+    font-size: 16px;
+}
+
 button {
     display: block;
+    padding: 10px 35px;
+    margin: 25px 0;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: #e8aa00;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #f5bc20;
+}
+
+a, a:visited {
+    text-decoration: none;
+    color: #e8aa00;
+    font-weight: bold;
 }
 /*FORM STYLING*/
 form {
@@ -84,5 +144,37 @@ form {
 
 input {
     display: block;
-    width: 200px;
+    margin-top: 3px;
+    padding-left: 10px;
+    width: 220px;
+    height: 30px;
+    border: 1px solid #b9b9b9;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input:focus {
+    border: none;
+    border: 1px solid rgb(43, 255, 0);
+    box-shadow: 2px 3px 3px rgb(80, 80, 80);
+}
+
+label {
+    font-size: smaller;
+    font-weight: bolder;
+    color: rgb(32, 32, 32);
+}
+
+@media only screen and (max-width: 1000px) {
+    .right {
+        width: 100vw;
+    }
+
+    .intro {
+        padding-right: 40px;
+    }
+
+    .hero {
+        display: none;
+    }
 }
