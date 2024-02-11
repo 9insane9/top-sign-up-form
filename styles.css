@@ -11,8 +11,8 @@
 body {
     width: 100vw;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    border: 1px solid orange;
-    /* background: black; */
+    /* border: 1px solid orange; */
+    background: black;
 }
 
 .page-container {
@@ -23,10 +23,11 @@ body {
     min-width: 350px;
     min-height: 100vh;
     margin: 0 auto;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .left {
+    position: relative;
     width: 35%;
     background: url("https://images.unsplash.com/photo-1590165482129-1b8b27698780?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
     background-size: cover;
@@ -45,7 +46,7 @@ body {
     color: white;
     font-family: 'Corben', serif;
     font-size: 80px;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
 }
 
 .logo-text::before {
@@ -56,15 +57,23 @@ body {
     margin-left: -200px;
 }
 
+.left > a:first-of-type {
+    position: absolute;
+    bottom: 10%;
+    left: 15%;
+    color: #fff;
+}
 
-/* .logo-text::before {
-    content: url("./potato.png");
-    height: 30px;
-    color: wheat;
-} */
+.left > a:last-of-type {
+    position: absolute;
+    bottom: 13%;
+    left: 22%;
+    color: #fff;
+}
 
 .right {
     width: 65%;
+    background-color: #fff;
 }
 
 .intro, .form, .submit {
@@ -76,7 +85,7 @@ body {
     padding-right: 200px;
     height: 35vh;
     background-color: rgb(240, 239, 239);
-    border: 1px solid green;
+    /* border: 1px solid green; */
     font-size: 22px;
     font-weight: 550;
 }
@@ -86,12 +95,14 @@ body {
 }
 
 .form {
+    position: relative;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
     /* min-height: 35vh; */
-    border: 1px solid cyan;
+    box-shadow: 0 5px 5px rgb(167, 167, 167);
+    /* border: 1px solid cyan; */
 }
 
 .form > h1 {
@@ -101,7 +112,7 @@ body {
 
 .submit {
     height: 30vh;
-    border: 1px solid purple;
+    /* border: 1px solid purple; */
 }
 
 .submit > span {
@@ -135,7 +146,9 @@ form {
     display: flex;
     flex-wrap: wrap; /*change later after fields are set to same length */
     max-width: 700px;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .form-field {
@@ -155,14 +168,22 @@ input {
 
 input:focus {
     border: none;
-    border: 1px solid rgb(43, 255, 0);
+    /* border: 1px solid rgb(43, 255, 0); */
     box-shadow: 2px 3px 3px rgb(80, 80, 80);
 }
 
 label {
-    font-size: smaller;
+    font-size: 0.7rem;
     font-weight: bolder;
-    color: rgb(32, 32, 32);
+    color: rgb(83, 83, 83);
+}
+
+#pw-match {
+    position: absolute;
+    bottom: -10px;
+    margin: -3px 0 20px 5px;
+    font-size: 0.9rem;
+    color: red;
 }
 
 @media only screen and (max-width: 1000px) {

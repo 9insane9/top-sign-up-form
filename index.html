@@ -13,6 +13,8 @@
             <div class="logo-text">
                 ODIN
             </div>
+            <a href="https://www.flaticon.com/free-icons/potato" title="potato icons">Potato icons created by Freepik - Flaticon</a>
+            <a href="https://unsplash.com/photos/yellow-round-fruits-on-white-surface-h3AkzboxK4Q">Background by Rodrigo dos Reis</a>
         </div>
         <div class="main right">
             <div class="intro">
@@ -24,35 +26,36 @@
             </div>
             <div class="form">
                 <h1>Let's do this!</h1>
-                <form action="">
+                <form action="" method="get" id="sign-up">
                     <p class="form-field">
                         <label for="first-name">FIRST NAME</label>
-                        <input type="text" name="first-name" id="first-name">
+                        <input type="text" name="first-name" id="first-name" required>
                     </p>
                     <p class="form-field">
                         <label for="last-name">LAST NAME</label>
-                        <input type="text" name="last-name" id="last-name">
+                        <input type="text" name="last-name" id="last-name" required>
                     </p>
                     <p class="form-field">
                         <label for="email">EMAIL</label>
-                        <input type="email" name="email" id="email">
+                        <input type="email" name="email" id="email" required>
                     </p>
                     <p class="form-field">
                         <label for="phone">PHONE NUMBER</label>
-                        <input type="tel" name="phone" id="phone">
+                        <input type="tel" name="phone" id="phone" required>
                     </p>
                     <p class="form-field">
                         <label for="password">PASSWORD</label>
-                        <input type="password" name="password" id="password">
+                        <input type="password" name="password" id="password" class="password" required>
                     </p>
                     <p class="form-field">
                         <label for="password-confirm">CONFIRM PASSWORD</label>
-                        <input type="password" name="password-confirm" id="password-confirm">
+                        <input type="password" name="password-confirm" id="password-confirm" class="password" required>
                     </p>
                 </form>
+                <span id="pw-match"></span>
             </div>
-            <div class="submit">
-                <button type="submit">Create account</button>
+            <div class="submit" form="sign-up">
+                <button type="submit" value="Submit">Create account</button>
                 <span>Already have an account? <a href="">Log in</a></span>
             </div>
         </div>
