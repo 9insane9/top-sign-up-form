@@ -83,7 +83,7 @@ body {
 .intro {
     padding-top: 15%;
     padding-right: 200px;
-    height: 35vh;
+    min-height: 35vh;
     background-color: rgb(240, 239, 239);
     /* border: 1px solid green; */
     font-size: 22px;
